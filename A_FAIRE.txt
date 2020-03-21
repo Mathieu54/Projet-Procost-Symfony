@@ -1,0 +1,17 @@
+Général :
+
+- Faire la pagination
+
+
+Metier :
+
+- Faire la dectection si il ya un employe et supprimer le metier.
+
+
+Projet :
+
+- Date dans la partie modification n'apparait pas ! [BUG]
+- Reste à faire la partie (Voir projet ne pas oublier le cout total du truc voir pdf)
+
+Employe :
+

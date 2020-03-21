@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} Procost - Modifications Métiers {% endblock %}
+
+{% block content %}
+
+    <main class="app-content">
+        <div class="app-title">
+            <div>
+                <h1><i class="fa fa-book"></i>&nbsp;Modification d'un métier</h1>
+            </div>
+            <ul class="app-breadcrumb breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{path("panel_home")}}"><i class="fa fa-home fa-lg"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{{ path("metier")}}">Métiers</a>
+                </li>
+                <li class="breadcrumb-item">Modification d'un métier</li>
+            </ul>
+        </div>
+        <div class="tile">
+            {% if id_metier is not null %}
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <section>
+                    <h3>Informations générales</h3>
+                    <div class="row mt-4">
+                        <div class="offset-md-4 col-md-8">
+                            <div class="form-group row">
+                                <label class="control-label col-md-3">Nom du métier :</label>
+                                <div class="col-md-9">
+                                    {{ form_widget(form.libelle, {'attr': {'class': 'form-control', 'value': id_metier.libelle}}) }}
+                                    <div class="form-control-feedback text-danger">{{ form_errors(form.libelle) }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr/>
+                <div class="row">
+                    <div class="btn-group btn-group-lg offset-md-6 col-md-6" role="group">
+                        <a href="{{ path("metier") }}" class="btn btn-danger"><i class="fa fa-save"></i>Annuler</a>
+                        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i>Enregistrer</button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            {% else %}
+                <div class="alert alert-dismissible alert-danger my-4">
+                    <button class="close" type="button" data-dismiss="alert">×</button><strong>Erreur l'id du métier n'existe pas !</strong>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+{% endblock %}
