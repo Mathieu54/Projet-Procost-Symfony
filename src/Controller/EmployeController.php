@@ -7,6 +7,7 @@ use App\Entity\Metier;
 use App\Entity\Production;
 use App\Entity\Projet;
 use App\Form\TypeEmploye;
+use App\Form\TypeProfil;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -64,9 +65,21 @@ class EmployeController extends AbstractController
     /**
      * @Route("/profil/modif", name="profil_modif")
      */
-    public function profil_modif()
+    public function profil_modif(Request $request)
     {
-        return $this->render('Panel_Employe/employes_form_edit_profil.html.twig', ['menu_actif' => "employes"]);
+        $employe = $this->getDoctrine()->getRepository(Employe::class)->findOneById($this->getUser()->getId());
+        $form = $this->createForm(TypeProfil::class, $employe);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success_profil_modif','Votre profil vient d\'étre modifié !');
+            $employe->setNom($form["nom"]->getData());
+            $employe->setPrenom($form["prenom"]->getData());
+            $employe->setEmail($form["email"]->getData());
+            $this->getDoctrine()->getManager()->persist($employe);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('employe');
+        }
+        return $this->render('Panel_Employe/employes_form_edit_profil.html.twig', ['form' => $form->createView(),'menu_actif' => "employes"]);
     }
 
 

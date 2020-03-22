@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b82dde2c-f220-4f34-bd77-dc7e5e633a9d" name="Default Changelist" comment="" />
+    <list default="true" id="b82dde2c-f220-4f34-bd77-dc7e5e633a9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/TypeProfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EmployeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EmployeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Employe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Employe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_form_edit_profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_form_edit_profil.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +22,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -128,11 +140,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1YlGfoOUfkyW3HWxDMsXIxaynna" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Projet-Procost\src\Form" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Projet-Procost\templates\Panel_Login" />
     </key>
@@ -168,11 +185,25 @@
       <workItem from="1584195356385" duration="7909000" />
       <workItem from="1584700524688" duration="16761000" />
       <workItem from="1584738554052" duration="95000" />
-      <workItem from="1584787982577" duration="4822000" />
+      <workItem from="1584787982577" duration="6495000" />
+      <workItem from="1584870108078" duration="6915000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

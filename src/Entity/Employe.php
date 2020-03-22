@@ -69,12 +69,10 @@ class Employe implements UserInterface
         return $this->date_embauche;
     }
 
-    /**
-     * @param mixed $date_embauche
-     */
-    public function setDateEmbauche($date_embauche): void
+    public function setDateEmbauche(\DateTimeInterface $date_embauche): self
     {
         $this->date_embauche = $date_embauche;
+        return $this;
     }
 
     /**
