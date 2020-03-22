@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b82dde2c-f220-4f34-bd77-dc7e5e633a9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/TypeProfil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EmployeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EmployeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Employe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Employe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_form_edit_profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_form_edit_profil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.readme" beforeDir="false" afterPath="$PROJECT_DIR$/.readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_FAIRE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/A_FAIRE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductionRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Home/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +183,7 @@
       <workItem from="1584700524688" duration="16761000" />
       <workItem from="1584738554052" duration="95000" />
       <workItem from="1584787982577" duration="6495000" />
-      <workItem from="1584870108078" duration="6915000" />
+      <workItem from="1584870108078" duration="8463000" />
     </task>
     <servers />
   </component>

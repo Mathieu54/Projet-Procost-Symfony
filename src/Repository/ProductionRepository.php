@@ -50,7 +50,7 @@ class ProductionRepository extends ServiceEntityRepository
 
     public function temps_production_list()
     {
-        $rawSql = "SELECT proj.projet_id, e.nom, e.prenom, p.nom as nom_projet, pro.time_production, pro.date_ajout FROM employe e, projet p, production pro, production_projet proj, production_employe proe WHERE pro.id = proe.production_id AND proe.employe_id = e.id AND proe.production_id = proj.production_id AND proj.projet_id = p.id GROUP BY pro.time_production ORDER BY pro.date_ajout DESC LIMIT 8;";
+        $rawSql = "SELECT proj.projet_id, e.id, e.nom, e.prenom, p.nom as nom_projet, pro.time_production, pro.date_ajout FROM employe e, projet p, production pro, production_projet proj, production_employe proe WHERE pro.id = proe.production_id AND proe.employe_id = e.id AND proe.production_id = proj.production_id AND proj.projet_id = p.id GROUP BY pro.time_production ORDER BY pro.date_ajout DESC LIMIT 8;";
         $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
         $stmt->execute([]);
         return $stmt->fetchAll();

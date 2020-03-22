@@ -144,7 +144,7 @@
                         <ul class="list-group">
                             {% for dataproduct in data_production %}
                                 <li class="list-group-item">
-                                    <a href="{{ path('employe') }}">{{ dataproduct.prenom }} {{ dataproduct.nom }}</a> a travaillé sur <a href="projet/voir/{{ dataproduct.projet_id }}">{{ dataproduct.nom_projet }}</a>
+                                    <a href="employe/voir/{{ dataproduct.id }}">{{ dataproduct.prenom }} {{ dataproduct.nom }}</a> a travaillé sur <a href="projet/voir/{{ dataproduct.projet_id }}">{{ dataproduct.nom_projet }}</a>
                                     <div class="text-muted font-italic text-right">{{ dataproduct.time_production }} heure(s)</div>
                                 </li>
                             {% endfor %}
