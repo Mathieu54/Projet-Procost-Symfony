@@ -2,24 +2,29 @@ Bonjour Monsieur,
 
 Tout d'abord voici certaines fonctionnalités qui ne marchent pas :
 
-- L'ajout de temps de production
-- La suppression d'un métier. Je l'ai fais mais j'ai pas trop reussi a detecter si un utilisateur était encore dans ce métier, c'est pour cela que j'ai préféré le desactiver.
-- La case qui permet de rester connecter.
-- La navigations si il y a plusieurs projets, metiers, employes. La aussi je l'ai fais mais beaucoup de bug sont présents j'ai préféré retirer la fonctionnalité.
 - Le côut total pas calculé aussi, assez complexe j'ai essayé plusieur fois d'imaginer la requete sql sans succés :/
+
+
 
 La liste de certain point qui sont bugés ou qui sont fausses :
 
+- L'ajout de temps de production marche sauf la sélection d'un projet (Par défault c'est le projet avec l'id 5 qui est selectionné), j'ai eu beaucoup d'erreur, alors j'ai preferé mettre un id pour montrer quand meme que l'ajout fonctionne.
+
 -La rentabilité qui je pense est fausse, je ne sais pas trop. Si vous pouvez me dire la formule une fois corrigé :)
 
--Si on veut modifier un projet cela fonctionne, sauf lors de la recuperation de la date elle affiche une date par défaut pour temps si je la modifie cela fonctionne quand meme (Bug visuel)
-
 -Le password ne peu pas etre modifié car je n'arrive pas le crypté. PS: Si vous ajoutez un employe le mdp doit être crypté par Défaut -> Bcrypt en ligne sur google premier lien. ATTENTION PAR DEFAULT VIE LES FIXTURES LE MDP DE CHAQUE COMPTE EST : admin
+
+- La navigations si il y a plusieurs projets, metiers, employes. La aussi je l'ai fais mais beaucoup de bug sont présents j'ai préféré retirer la fonctionnalité.
+
+
+
 
 La liste des fonctionnalites qui fonctionnent :
 
 -Déconnexion et login
+
 -La détection de role manager, interdiction d'accéder à une zone security.yml, et suppresion des boutons edit ou delete si ce n'est pas un manager.
+
 - Dashboard nombre de projet rendu et non rendu, le total d'employe, le nombre d'heure de production, le temps de production (affiche les 7 plus recents), le taux de livraison et le top employe et les projets récents(affiche les 5 plus recents) et pour finir dans la dashboard vous pouvez cliquer sur les employes en vert ou projet qui redirige vers les fiches employe si vous etes manager ou vers les affiches des projets.
 
 - Projets, vous pouvez voir la liste des projets des plus recents, l'icone bleu permet de voir le projet, l'icone jaune permet de modifier le projet et l'icone verte permet de livrer le projet. Le bouton ajouter un projet et disponible poour le manager.
@@ -29,6 +34,8 @@ La liste des fonctionnalites qui fonctionnent :
 - Employe idem que le reste sauf un bouton bleu en plus en haut qui permet de voir votre profil(celui qui est connecté) mais vous ne pouvez pas voir ceux des autres sauf si vous êtes manager.
 
 - Profil vous pouvez modifier votre profil via le bouton bleu ou bien regarder les stats de production ou en ajouter meme si cela fonctionne pas...
+
+
 
 
 Pour conclure ce fut un projet instructif et super cool à développer seul chez soi, de base je n'ai pas trop aimé symfony au début pis au fur et à mesure et j'y ai pris gout. Merci pour tous !

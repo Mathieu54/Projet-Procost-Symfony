@@ -73,10 +73,7 @@ class ProjetRepository extends ServiceEntityRepository
     }
 
     public function projet_non_rendu() {
-        $rawSql = "SELECT p.id, p.nom FROM projet p WHERE p.date_livraison IS NULL;";
-        $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
-        $stmt->execute([]);
-        return $stmt->fetchAll();
+        return $this->createQueryBuilder('p')->andWhere('p.date_livraison is NULL')->getQuery()->getResult();
     }
 
 }

@@ -19,7 +19,7 @@
         <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
         <aside class="app-sidebar">
             <div class="app-sidebar__user">
-                <img class="app-sidebar__user-avatar" src="{{ asset(app.user.GetUrlImg) }}" alt="User Image">
+                <img class="app-sidebar__user-avatar" src="{% if(app.user.GetUrlImg is not null) %}{{ asset(app.user.GetUrlImg) }} {% else %} {{ asset(img/user-defaut.jpg) }}{% endif %}" alt="User Image">
                 <div>
                     <p class="app-sidebar__user-name">{{ app.user.nom }} {{ app.user.prenom }}</p>
                     <p class="app-sidebar__user-designation">{{ app.user.Metier.libelle }}</p>

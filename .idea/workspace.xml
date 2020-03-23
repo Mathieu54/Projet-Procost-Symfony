@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b82dde2c-f220-4f34-bd77-dc7e5e633a9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/user-defaut.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/TypeProduction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.readme" beforeDir="false" afterPath="$PROJECT_DIR$/.readme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A_FAIRE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/A_FAIRE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductionRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductionRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Panel_Home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EmployeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EmployeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MetierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MetierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TypeEmploye.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TypeEmploye.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TypeProjet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TypeProjet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MetierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/MetierRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProjetRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProjetRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_profil.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Employe/employes_voir.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Employe/employes_voir.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Login/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Login/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Metier/metiers_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Metier/metiers_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Panel_Projet/projets_form_edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Panel_Projet/projets_form_edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +196,8 @@
       <workItem from="1584700524688" duration="16761000" />
       <workItem from="1584738554052" duration="95000" />
       <workItem from="1584787982577" duration="6495000" />
-      <workItem from="1584870108078" duration="8463000" />
+      <workItem from="1584870108078" duration="8610000" />
+      <workItem from="1584956474046" duration="7025000" />
     </task>
     <servers />
   </component>

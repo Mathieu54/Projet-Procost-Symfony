@@ -7,6 +7,7 @@ use App\Entity\Metier;
 use App\Entity\Production;
 use App\Entity\Projet;
 use App\Form\TypeEmploye;
+use App\Form\TypeProduction;
 use App\Form\TypeProfil;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,22 +45,52 @@ class EmployeController extends AbstractController
     /**
      * @Route("/employe/voir/{id}", name="employe_voir")
      */
-    public function employe_voir(int $id)
+    public function employe_voir(Request $requete, int $id)
     {
+        $production = new Production();
+        $form = $this->createForm(TypeProduction::class, $production);
+        $projet_id = $this->getDoctrine()->getRepository(Projet::class)->findOneById(5);
+        $employe_id = $this->getDoctrine()->getRepository(Employe::class)->findOneById($id);
+        $form->handleRequest($requete);
+        if($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success_ajout_prod_employe','Vouvs venez d\'ajouter du temps de production !');
+            $production->setTimeProduction($form["time_production"]->getData());
+            $production->setDateAjout(new \DateTime('now'));
+            $production->addProjetId($projet_id);
+            $production->addEmployeId($employe_id);
+            $this->getDoctrine()->getManager()->persist($production);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('employe_voir',array('id' => $id));
+        }
         $employe = $this->getDoctrine()->getRepository(Employe::class)->findOneById($id);
         $production_profil = $this->getDoctrine()->getRepository(Production::class)->production_profil($id);
-        return $this->render('Panel_Employe/employes_voir.html.twig', ['menu_actif' => "employes", "employe" => $employe, "production_profil" => $production_profil]);
+        return $this->render('Panel_Employe/employes_voir.html.twig', ['form' => $form->createView(),'menu_actif' => "employes", "employe" => $employe, "production_profil" => $production_profil]);
     }
 
     /**
      * @Route("/profil", name="profil")
      */
-    public function mon_profil()
+    public function mon_profil(Request $requete)
     {
-        $projet_non_livre = $this->getDoctrine()->getRepository(Projet::class)->projet_non_rendu();
+        $production = new Production();
+        $form = $this->createForm(TypeProduction::class, $production);
+        $projet_id = $this->getDoctrine()->getRepository(Projet::class)->findOneById(5);
+        $employe_id = $this->getDoctrine()->getRepository(Employe::class)->findOneById($this->getUser()->getId());
+        $form->handleRequest($requete);
+        if($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success_ajout_prod','Vouvs venez d\'ajouter du temps de production !');
+            $production->setTimeProduction($form["time_production"]->getData());
+            $production->setDateAjout(new \DateTime('now'));
+            $production->addProjetId($projet_id);
+            $production->addEmployeId($employe_id);
+            $this->getDoctrine()->getManager()->persist($production);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('profil');
+        }
         $user = $this->getUser()->getId();
+        $projet_non_livre = $this->getDoctrine()->getRepository(Projet::class)->projet_non_rendu();
         $production_profil = $this->getDoctrine()->getRepository(Production::class)->production_profil($user);
-        return $this->render('Panel_Employe/employes_profil.html.twig', ['menu_actif' => "employes", "projet_non_livre" => $projet_non_livre, "production_profil" => $production_profil]);
+        return $this->render('Panel_Employe/employes_profil.html.twig', ['form' => $form->createView(), 'menu_actif' => "employes", "projet_non_livre" => $projet_non_livre, "production_profil" => $production_profil]);
     }
 
     /**
@@ -81,39 +112,6 @@ class EmployeController extends AbstractController
         }
         return $this->render('Panel_Employe/employes_form_edit_profil.html.twig', ['form' => $form->createView(),'menu_actif' => "employes"]);
     }
-
-
-
- /*
-    public function employe_profil(Request $request): Response
-    {
-        $newemploye = new Employe();
-        $form = $this->createForm(TypeEmploye::class, $newemploye);
-
-        $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('success_employe','Employé ajouté avec succés !');
-            $this->getDoctrine()->getManager()->persist($newemploye);
-            $this->getDoctrine()->getManager()->flush();
-            return $this->redirectToRoute('employe');
-        }
-        return $this->render('Panel_Employe/employes_form.html.twig', ['form' => $form->createView(),'menu_actif' => "employes"]);
-    }
-
-
-
-
-
-
-
-
-    public function profil_new()
-    {
-        return $this->render('Panel_Projet/projets_form.html.twig', ['menu_actif' => "projets"]);
-    }
-*/
-
-
 
 }
 ?>

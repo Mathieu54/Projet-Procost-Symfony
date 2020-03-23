@@ -43,4 +43,3 @@ security:
          - { path: ^/projet/add, roles: ROLE_MANAGER}
          - { path: ^/projet/(edit|end)/\d+$, roles: ROLE_MANAGER }
          - { path: ^/, roles: ROLE_USER }
-        # - { path: ^/profile, roles: ROLE_USER }

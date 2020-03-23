@@ -50,7 +50,7 @@
                             <div class="form-group row">
                                 <label class="control-label col-md-3">Date de création</label>
                                 <div class="col-md-9">
-                                    {{ form_widget(form.date_creation, {'attr': {'class': 'form-control', 'value': id_projet.datecreation|date('Y')}}) }}
+                                    {{ form_widget(form.date_creation, {'attr': {'class': 'form-control', 'value': id_projet.datecreation|date('Y-m-d')}}) }}
                                     <div class="form-control-feedback text-danger">{{ form_errors(form.date_creation) }}</div>
                                 </div>
                             </div>

@@ -56,6 +56,14 @@ class MetierRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+    public function check_metier_employe()
+    {
+        $rawSql = "SELECT COUNT(metier_id) AS nb_employe, metier_id FROM employe WHERE 'p.id = :id' GROUP BY metier_id;";
+        $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
+        $stmt->execute([]);
+        return $stmt->fetchAll();
+    }
+
 
 /*$rawSql = "SELECT COUNT(metier_id) AS nb_employe, metier_id FROM employe WHERE 'p.id = :id' GROUP BY metier_id;";
 $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);

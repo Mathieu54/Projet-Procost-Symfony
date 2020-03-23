@@ -27,6 +27,11 @@
                         <button class="close" type="button" data-dismiss="alert">×</button><strong>{{messageprofil}}</strong>
                     </div>
                 {% endfor %}
+                {% for messageajout in app.flashes('success_employe') %}
+                    <div class="alert alert-dismissible alert-success my-4">
+                        <button class="close" type="button" data-dismiss="alert">×</button><strong>{{messageajout}}</strong>
+                    </div>
+                {% endfor %}
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>

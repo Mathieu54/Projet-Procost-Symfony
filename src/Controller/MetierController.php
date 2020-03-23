@@ -66,17 +66,16 @@ class MetierController extends AbstractController
      */
     public function metier_delete(int $id)
     {
-        $check_employe = $this->getDoctrine()->getRepository(Metier::class)->check_metier_employe();
         $get_id_metier = $this->getDoctrine()->getRepository(Metier::class)->findOneById($id);
-        for($i = 0; $i < count($check_employe); $i++) {
-            if($get_id_metier->getId() === (int)$check_employe[$i]['metier_id']) {
-                var_dump($get_id_metier->getId());
-                var_dump((int)$check_employe[1]['metier_id']);
-            } else {
-                $this->getDoctrine()->getManager()->remove($get_id_metier);
-                $this->getDoctrine()->getManager()->flush();
-            }
+        try {
+            $this->getDoctrine()->getManager()->remove($get_id_metier);
+            $this->getDoctrine()->getManager()->flush();
+        }catch(\Exception $e) {
+            $this->addFlash('fail','Il y a des employés qui ont encore ce métier !');
+            return $this->redirectToRoute('metier');
         }
+        $this->addFlash('success','Métier supprimé avec succés !');
+        return $this->redirectToRoute('metier');
 
     }
 
